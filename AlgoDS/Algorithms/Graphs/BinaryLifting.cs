@@ -43,6 +43,9 @@ namespace AlgoDS.Algorithms.Graphs
 
         public void AddEdge(int a, int b)
         {
+            if (a >= adj.Length || b >= adj.Length)
+                return;
+
             adj[a].Add(b);
             adj[b].Add(a);
         }

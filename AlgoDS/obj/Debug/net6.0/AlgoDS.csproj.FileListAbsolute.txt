@@ -12,4 +12,4 @@ C:\Users\Admin\Desktop\AlgoDS\AlgoDS\obj\Debug\net6.0\AlgoDS.dll
 C:\Users\Admin\Desktop\AlgoDS\AlgoDS\obj\Debug\net6.0\AlgoDS.pdb
 C:\Users\Admin\Desktop\AlgoDS\AlgoDS\obj\Debug\net6.0\AlgoDS.genruntimeconfig.cache
 C:\Users\Admin\Desktop\AlgoDS\AlgoDS\obj\Debug\net6.0\ref\AlgoDS.dll
-C:\Users\Admin\Desktop\AlgoDS\AlgoDS\bin\Debug\net6.0\ref\AlgoDS.dll
+C:\Users\Admin\Desktop\AlgoDS\AlgoDS\obj\Debug\net6.0\refint\AlgoDS.dll

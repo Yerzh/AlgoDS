@@ -1,4 +1,5 @@
-﻿using AlgoDS.DataStructures;
+﻿using AlgoDS.Algorithms.Graphs;
+using AlgoDS.DataStructures;
 using System;
 using System.Linq;
 
@@ -8,29 +9,53 @@ namespace AlgoDS
     {
         static void Main(string[] args)
         {
-            int n, q, l, r, k;
-            int[] input;
+            //int n = 3;
+            //int[][] queries = new int[3][]
+            //{
+            //    new int[] { 5, 3 },
+            //    new int[] { 4, 7 },
+            //    new int[] { 2, 3 },
+            //};
 
-            input = ReadIntVals();
-            n = input[0];
-            q = input[1];
+            int n = 28;
+            int[][] queries = new int[1][]
+            {
+                new int[] { 1, 2 }
+            };
 
-            int[] arr = new int[n + 1];
+            var res = CycleLengthQueries(n, queries);
+
+            foreach(var i in res)
+            {
+                Console.Write(i + " ");
+            }
+        }
+
+        static int[] CycleLengthQueries(int n, int[][] queries)
+        {
+            int v = (int)Math.Pow(2, n) - 1;
+            var bl = new BinaryLifting(v);
 
             for (int i = 1; i <= n; i++)
-                arr[i] = int.Parse(Console.ReadLine());
-
-            var mergeSortTree = new MergeSortTree(arr);
-            mergeSortTree.Build(1, 1, n);
-
-            while (q-- > 0)
             {
-                input = ReadIntVals();
-                l = input[0];
-                r = input[1];
-                k = input[2];
-                Console.WriteLine(mergeSortTree.Query(1, 1, n, l, r, k));
+                bl.AddEdge(i, 2 * i);
+                bl.AddEdge(i, 2 * i + 1);
             }
+
+            bl.Preprocess();
+
+            int m = queries.Length;
+            int[] ans = new int[m];
+            for (int i = 0; i < m; i++)
+            {
+                int a = queries[i][0];
+                int b = queries[i][1];
+
+                int dist = bl.GetDistance(a, b);
+                ans[i] = dist + 1;
+            }
+
+            return ans;
         }
 
         static int[] ReadIntVals() =>
