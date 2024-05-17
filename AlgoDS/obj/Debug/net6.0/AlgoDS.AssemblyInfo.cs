@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlgoDS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c274f8c4de2762bf5639bf736c7729adb9abe35")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlgoDS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlgoDS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

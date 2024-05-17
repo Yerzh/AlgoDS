@@ -1,15 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "XKrizPyLXF+wTmDoHf0ZN8d7fCoq5hSZBz2u7kAzqAK1ax0aqF8uHU0RDEwps6pJGJM9/cm0/yXyqr3Ah0KXnw==",
+  "dgSpecHash": "BqcPvkJiIUYjUMevGdAool/AmvbcRgsHwsERcsBIwGSnXQAUe13l61InTezXsnBCVFUg10BRPhct42FSmE8stA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\AlgoDS\\AlgoDS\\AlgoDS.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1803",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nexus.intranet.citranet.fr:8081/repository/nuget-group/'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
-    }
-  ]
+  "projectFilePath": "C:\\Users\\ysalkynbayev\\Desktop\\AlgoDS\\AlgoDS\\AlgoDS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ysalkynbayev\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\ysalkynbayev\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\ysalkynbayev\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\ysalkynbayev\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.29\\microsoft.netcore.app.host.win-x64.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
 }
