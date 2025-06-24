@@ -58,7 +58,7 @@ namespace AlgoDS.Algorithms.Graphs
 
             int d = depth[b] - depth[a];
 
-            while(d > 0)
+            while (d > 0)
             {
                 int i = (int)Math.Log2(d);
                 b = up[b][i];
@@ -80,19 +80,20 @@ namespace AlgoDS.Algorithms.Graphs
             return up[a][0];
         }
 
-        //O(log(n))
+        //O(log(n)), if node is zero-based
         int KthAncestor(int node, int k)
         {
+            node++;
             if (depth[node] < k)
                 return -1;
 
-            for (int j = 0; j < LOG; j++)
+            for (int j = 0; j <= LOG; j++)
             {
                 if ((k & (1 << j)) > 0)
                     node = up[node][j];
             }
 
-            return node;
+            return node - 1;
         }
 
         //O(log(n))
@@ -108,7 +109,7 @@ namespace AlgoDS.Algorithms.Graphs
             up[node][0] = parent;
             depth[node] = level;
 
-            foreach(int child in adj[node])
+            foreach (int child in adj[node])
             {
                 if (child != parent)
                     FillZerothParent(child, node, level + 1);
@@ -126,7 +127,7 @@ namespace AlgoDS.Algorithms.Graphs
                 {
                     if (up[i][j - 1] != -1)
                     {
-                        up[i][j] = up[ up[i][j - 1] ][j - 1];
+                        up[i][j] = up[up[i][j - 1]][j - 1];
                     }
                 }
             }
